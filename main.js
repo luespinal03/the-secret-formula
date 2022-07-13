@@ -163,12 +163,13 @@ if (salt.checked === true) {
 console.log(condimentTypes);
 //  CONDIMENTS
 
+// IF NOTHING IS SELECTED
 if(breadType === '' || meatTypes === '' || cheeseTypes === '' || herbTypes === '' || condimentTypes === ''){
     alert("Please, select an option from each");
 }
 
-
-if (breadType !== '' && breadType !== '' && meatTypes !== '' && cheeseTypes !== '' || herbTypes !== '' && condimentTypes !== ''){
+//  IF NOTHING IS LEFT EMPTY
+if (breadType !== '' && meatTypes !== '' && cheeseTypes !== '' && herbTypes !== '' && condimentTypes !== ''){
     alert(`Your order:   Bread type: ${breadType},   Meat type(s): ${meatTypes}  Cheese type(s): ${cheeseTypes},  Herb type(s): ${herbTypes}   Condiment type(s): ${condimentTypes}.`)
 }
 
@@ -262,7 +263,6 @@ if (date.value === ''){
     alert(`Haircut scheduled for ${date.value} with ${nameStylist.value} for ${hairlength} hair.`);
 }
     
-
     date.value = '';
     nameStylist.value = '';
     shortHair.checked = true;
