@@ -163,10 +163,14 @@ if (salt.checked === true) {
 console.log(condimentTypes);
 //  CONDIMENTS
 
+if(breadType === '' || meatTypes === '' || cheeseTypes === '' || herbTypes === '' || condimentTypes === ''){
+    alert("Please, select an option from each");
+}
 
 
-
+if (breadType !== '' && breadType !== '' && meatTypes !== '' && cheeseTypes !== '' || herbTypes !== '' && condimentTypes !== ''){
     alert(`Your order:   Bread type: ${breadType},   Meat type(s): ${meatTypes}  Cheese type(s): ${cheeseTypes},  Herb type(s): ${herbTypes}   Condiment type(s): ${condimentTypes}.`)
+}
 
 
 //  RESETS
@@ -239,7 +243,7 @@ form3.addEventListener('submit', function(){
     event.preventDefault();
     // console.log('stylist button');
 
-    let hairlength = false;
+    let hairlength = '';
     if (shortHair.checked === true) {
         hairlength = "Short";
     } else if (longHair.checked === true) {
@@ -253,7 +257,8 @@ if (date.value === ''){
     alert('Please, specify length of your hair.')
 } if (nameStylist.value === ''){
     alert('Please, specify desired hair stylist.')
-}  else {
+}  else if (date.value !== '' && nameStylist.value !== '' && shortHair.checked === true ||longHair.checked === true) {
+
     alert(`Haircut scheduled for ${date.value} with ${nameStylist.value} for ${hairlength} hair.`);
 }
     
